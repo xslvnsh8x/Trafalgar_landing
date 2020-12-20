@@ -1,0 +1,110 @@
+@import "variables";
+
+.latest {
+  margin-top: 222px;
+  padding-bottom: 201px;
+
+  background: url(../img/element.svg) bottom -45px right 7% / auto no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url(../img/latest-bg.svg) top 110px right / auto no-repeat;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 65px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 56px;
+      height: 2px;
+      bottom: -26px;
+      left: calc(50% - 28px);
+      border-radius: 5px;
+      background: $black;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    padding-top: 42px;
+    padding-bottom: 70px;
+    background: url(../img/element.svg) top left / auto no-repeat;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 34px;
+
+    &-item {
+      border-radius: 20px;
+      box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+      background: $white;
+      overflow: hidden;
+
+      &-image {
+        height: 240px;
+
+        &-1 {
+          background: url(../img/latest-1.jpg) top center / contain no-repeat;
+        }
+
+        &-2 {
+          background: url(../img/latest-2.jpg) top center / contain no-repeat;
+        }
+
+        &-3 {
+          background: url(../img/latest-3.jpg) top center / contain no-repeat;
+        }
+      }
+
+      &-info {
+        padding: 24px 33px 35px 33px;
+
+        &Title {
+          font-weight: 700;
+          font-size: 21px;
+          line-height: 32px;
+          color: $black;
+        }
+
+        &Text {
+          margin-top: 12px;
+          margin-bottom: 25px;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 28px;
+          color: $topaz;
+        }
+
+        &Link {
+          display: inline-flex;
+          align-items: center;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 28px;
+          color: $picton-blue;
+          transition: $transition-links;
+
+          &:hover .latest__box-item-infoIcon {
+            margin-left: 16px;
+          }
+        }
+
+        &Icon {
+          margin-left: 8px;
+          font-size: 16px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

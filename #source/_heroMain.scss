@@ -1,0 +1,47 @@
+@import "variables";
+
+.heroMain {
+  margin-top: 24px;
+  background: url(../img/element.svg) top left -48px / auto no-repeat;
+
+  &__container {
+    max-width: 1274px;
+    min-height: 598px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../img/heroMain.png) top right / auto no-repeat;
+  }
+
+  &__info {
+    max-width: 445px;
+    margin-left: 27px;
+
+    &-heading {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 56px;
+      color: $black;
+    }
+
+    &-text {
+      margin-top: 25px;
+      margin-bottom: 45px;
+      font-weight: 300;
+      font-size: 21px;
+      line-height: 32px;
+      color: $topaz;
+    }
+
+    &-link {
+      background-color: $cornflower-blue;
+      color: $white;
+
+      &:hover {
+        background-color: $cornflower-blue-hover;
+        border-color: $cornflower-blue-hover;
+      }
+    }
+  }
+}

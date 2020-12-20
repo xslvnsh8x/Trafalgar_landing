@@ -1,0 +1,62 @@
+@import "variables";
+
+.hero {
+  margin-top: 220px;
+
+  &__container {
+    max-width: 1274px;
+    min-height: 477px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--providers {
+      align-items: flex-end;
+      background: url(../img/heroProviders.png) top left / auto no-repeat;
+    }
+
+    &--download {
+      min-height: 434px;
+      background: url(../img/heroDownload.png) top right / auto no-repeat;
+    }
+  }
+
+  &__info {
+    max-width: 486px;
+
+    &--providers {
+      margin-right: 27px;
+    }
+
+    &--download {
+      margin-left: 117px;
+    }
+
+    &-title {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 56px;
+        height: 2px;
+        bottom: -26px;
+        left: 0;
+        border-radius: 5px;
+        background: $black;
+      }
+    }
+
+    &-subtitle {
+      margin-top: 59px;
+      margin-bottom: 38px;
+      max-width: 409px;
+    }
+
+    &-linkIcon {
+      margin-left: 15px;
+      font-size: 16px;
+    }
+  }
+}

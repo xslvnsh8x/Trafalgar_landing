@@ -1,0 +1,37 @@
+@import "normalize";
+@import "variables";
+@import "common";
+@import "header";
+@import "heroMain";
+@import "services";
+@import "hero";
+@import "feedback";
+@import "latest";
+@import "footer";
+
+body {
+  min-height: 100vh;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  color: $black;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+}
+
+.center {
+  padding: 0 calc(50% - 610px);
+}
+
+.main {
+  grid-area: main;
+}
+
+
+@import "media";

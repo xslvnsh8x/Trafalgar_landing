@@ -1,0 +1,122 @@
+@import "variables";
+
+.feedback {
+  margin-top: 266px;
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/element.svg) bottom 90px left / auto no-repeat;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 64px 118px 79px 118px;
+      border-radius: 24px;
+      overflow: hidden;
+
+      background:
+        url(../img/element2.svg) top -16px right -50px / auto no-repeat,
+        linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+
+      &Title {
+        position: relative;
+        line-height: 48px;
+        color: $white;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 56px;
+          height: 2px;
+          bottom: -25px;
+          left: calc(50% - 28px);
+          border-radius: 5px;
+          background: $white;
+        }
+      }
+
+      &-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 104px;
+      }
+
+      &-author {
+        display: flex;
+        align-items: center;
+
+        &Image {
+          width: 141px;
+          height: 141px;
+          margin-right: 29px;
+          background: url(../img/feedback-image.png) center / contain no-repeat;
+        }
+
+        &Text {
+          color: $white;
+        }
+
+        &Title {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 48px;
+        }
+
+        &Subtitle {
+          font-size: 18px;
+          line-height: 24px;
+          color: $black-85;
+        }
+      }
+
+      &-text {
+        display: flex;
+        align-items: center;
+        font-size: 19px;
+        line-height: 30px;
+        color: $black-90;
+      }
+    }
+
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 337px;
+      margin-top: 42px;
+      color: $cornflower-30;
+
+      &List {
+        display: flex;
+        align-items: center;
+      }
+
+      &Item {
+        font-size: 10px;
+
+        &:not(:last-child) {
+          margin-right: 18px;
+        }
+      }
+
+      &Icon {
+        transition: $transition-links;
+        cursor: pointer;
+
+        &:hover {
+          color: $cornflower-blue;
+        }
+      }
+
+      &>.fa-arrow-left,
+      &>.fa-arrow-right {
+        font-size: 20px;
+      }
+    }
+  }
+}

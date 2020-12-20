@@ -1,0 +1,139 @@
+@import "variables";
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 112px;
+
+  &__nav {
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &-link {
+      font-size: 18px;
+      line-height: 23px;
+      color: $mountain-mist;
+      transition: $transition-links;
+
+      &-active {
+        font-weight: 700;
+        color: $revolver;
+      }
+
+      &:hover {
+        color: $revolver;
+      }
+    }
+  }
+
+  &__openMenu {
+    display: none;
+    padding: 12px;
+
+    &-icon {
+      font-size: 32px;
+      color: $revolver;
+      cursor: pointer;
+    }
+  }
+
+  &__switcher {
+    position: absolute;
+    left: -99999px;
+    visibility: hidden;
+  }
+
+  &__switcher:checked~.header__menuMobile {
+    right: 0;
+  }
+
+  &__menuMobile {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $white;
+    top: 0;
+    right: 100vw;
+    z-index: 99;
+
+    &-topBar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 80px;
+    }
+
+    &-navList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      list-style: none;
+    }
+
+    &-navItem {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &-navLink {
+      font-size: 32px;
+      text-decoration: none;
+      color: $revolver;
+    }
+
+    &-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    &-bottomBar {
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__closeMenu-icon {
+    font-size: 32px;
+    color: $revolver;
+    cursor: pointer;
+  }
+
+  &__social {
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+
+    &-icon {
+      font-size: 32px;
+      color: $picton-blue;
+    }
+
+  }
+}

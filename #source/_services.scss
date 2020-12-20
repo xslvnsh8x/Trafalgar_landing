@@ -1,0 +1,105 @@
+@import "variables";
+
+.services {
+  margin-top: 192px;
+  background: url(../img/services-bg.png) top left / auto no-repeat;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    max-width: 952px;
+    text-align: center;
+
+    &-title {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 56px;
+        height: 2px;
+        bottom: -26px;
+        left: calc(50% - 28px);
+        border-radius: 5px;
+        background: $black;
+      }
+    }
+
+    &-subtitle {
+      margin-top: 61px;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 36px;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    background: url(../img/element.svg) top 46% right / auto no-repeat;
+
+
+    &-item {
+      padding: 54px 37px 47px 37px;
+      box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+      border-radius: 20px;
+      background: $white;
+
+      &-image {
+        height: 92px;
+        width: 100%;
+        background-position: center left;
+        background-size: auto;
+        background-repeat: no-repeat;
+
+        &-search {
+          background-image: url(../img/services-search.svg);
+        }
+
+        &-online {
+          background-image: url(../img/services-online.svg);
+        }
+
+        &-consultation {
+          background-image: url(../img/services-consultation.svg);
+        }
+
+        &-details {
+          background-image: url(../img/services-details.svg);
+        }
+
+        &-emergency {
+          background-image: url(../img/services-emergency.svg);
+        }
+
+        &-tracking {
+          background-image: url(../img/services-tracking.svg);
+        }
+      }
+
+      &-info {
+        margin-top: 21px;
+
+        &Title {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 56px;
+        }
+
+        &Text {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 28px;
+          color: $topaz;
+        }
+      }
+    }
+  }
+}

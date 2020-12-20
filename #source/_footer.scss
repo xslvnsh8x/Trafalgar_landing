@@ -1,0 +1,73 @@
+@import "variables";
+
+.footer {
+  padding: 109px 0;
+  background: url(../img/element-3.svg) bottom left / auto no-repeat,
+    linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+
+  &-wrap {
+    display: grid;
+    grid-template-areas: 'info nav';
+    grid-template-columns: 1fr;
+  }
+
+  &__info {
+    grid-area: info;
+    color: $white;
+    max-width: 391px;
+
+    &-about {
+      margin-top: 17px;
+      margin-bottom: 31px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &-copyright {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+
+    &-column {
+
+      &Title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 60px;
+        color: $white;
+      }
+
+      &List {}
+
+      &Item {}
+
+      &Link {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 38px;
+        color: $white;
+        transition: $transition-links;
+
+        &:hover {
+          text-shadow: 0 0 4px $white;
+        }
+      }
+    }
+  }
+
+  &__copyMobile {
+    display: none;
+    color: $white;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
